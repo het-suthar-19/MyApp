@@ -6,6 +6,7 @@ import Welcome from "../components/Welcome";
 import PopularMeditation from "../components/PopularMeditation";
 import AsyncStorage from "@react-native-async-storage/async-storage"
 import DailyMeditation from "../components/DailyMeditation";
+import DailyQuote from "../components/DailyQuote";
 
 const Home = () => {
     const [userDetails, setUserDetails] = useState(null);
@@ -33,8 +34,9 @@ const Home = () => {
                         testID="screensDisplay"
                     >
                         <Welcome userDetails={userDetails ? JSON.parse(userDetails) : null} />
-                        <PopularMeditation />
-                        <DailyMeditation />
+                        <DailyQuote />
+                        <PopularMeditation  />
+                        <DailyMeditation  />
                     </View>
                 </ScrollView>
             </SafeAreaView>
